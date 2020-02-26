@@ -1,0 +1,19 @@
+/* pages/diease/caomei.wxss */
+.contener{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ 
+}
+.diease{
+text-align: center;
+font-size: 50rpx
+}
+.contener1{
+  width: 90%;
+  margin-left: 5%
+}
+.img{
+  width: 100%
+
+}/* pages/diease/tudou.wxss */

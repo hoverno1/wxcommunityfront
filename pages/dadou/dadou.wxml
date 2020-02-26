@@ -1,0 +1,26 @@
+<!--pages/index/index.wxml-->
+<view bindtap='onChangeShowState'>
+<button bindtap='houduanRequest'  type='primary'>获取信息</button>
+</view>
+
+<view class="{{showView?'header_view_show':'header_view_hide'}}" >
+<view wx:if="{{score>0.75}}">
+  识别结果：{{shu}}
+  <image src='../../images/dadou.jpg'></image>
+<text hidden='{{showbanfa1}}'>方案：选用73%灭螨净3000倍液或40%二氯杀螨醇1000倍液或25%克螨特乳油3000倍液或20%扫螨净、螨克乳油2000倍液等喷雾，连喷2-3次</text>
+<text hidden='{{showbanfa2}}'>方案：药剂可选用20%病毒A500倍液或1.5%植病灵乳油1000倍液，或者5%菌毒清400倍液，连续使用2~3次，隔10天1次.</text>
+<text hidden='{{showbanfa3}}'>方案：必要时喷洒90%晶体敌百虫800倍液或80%敌敌畏乳油1000倍液，每667m2 喷对好的药液75L。</text>
+<text hidden='{{showbanfa4}}'>方案：减少使用除草剂</text>
+<text hidden='{{showbanfa5}}'>方案：喷洒1：1：160倍式波尔多液或30%碱式硫酸铜悬浮剂400倍液、30%氧氯化铜悬浮剂800倍液、47%加瑞农可湿性粉剂700～800倍液、12%绿乳铜乳油600倍液。</text>
+<text hidden='{{showbanfa6}}'>植物健康无需用药</text>
+<text hidden='{{showbanfa7}}'>方案：病害流行条件出现时, 及早用百菌清、多菌灵、退菌特等喷施防治。</text>
+<text hidden='{{showbanfa8}}'>方案：发病初期开始喷洒40%多· 硫悬浮剂600～700倍液或70%甲基硫菌灵可湿性粉剂500～600倍液、50%混杀硫悬浮剂600倍液、80%多菌灵可湿性粉剂600～700倍液、50%扑海因可湿性粉剂1000～1500倍液、12.5%治萎灵水剂500倍液、40%治萎灵粉剂1000倍液、50%复方菌核净1000倍液。</text>
+  </view>
+ <view wx:if="{{score<0.8}}">
+  识别结果：未知,或者概率过小</view>
+<view class='conter' hidden='{{img_hidden}}'>
+<text class='word'>识别的结果是否正确</text>
+<button type='primary' bindtap='yes'>结果正确</button>
+<button type='warn' bindtap='no'>结果错误</button>
+</view>
+</view>

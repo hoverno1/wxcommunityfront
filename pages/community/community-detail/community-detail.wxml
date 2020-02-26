@@ -1,0 +1,10 @@
+<!--pages/community/community-detail/community-detail.wxml-->
+<view class="container">
+  <image src="{{postData.imgSrc}}" class="head-image"></image>
+  <view class="author-date">
+    <image class="avatar" src="{{postData.avatar}}"></image>
+    <text class="author">{{postData.author}}</text>
+  </view>
+  <text class="title">{{postData.disease}}</text>
+  <text class="detail">{{postData.detail}}</text>
+</view>

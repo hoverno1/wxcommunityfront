@@ -1,0 +1,33 @@
+/* pages/shibie/tudou.wxss */.counter1{
+height: 100px;
+}
+.biaoti{
+  display: flex;
+  justify-content:  center;
+}
+.biaoti2{
+display: flex;
+justify-content: center; 
+align-items: center
+}
+.counter2{
+display: flex;
+justify-content: center; 
+/*align-items: center;*/
+height: 240px;
+}
+.tupian{
+  width: 180px;
+  height: 120px;
+}
+.hanzi1{
+  display: flex;
+justify-content: center; 
+align-items: center;
+}
+.counter3{
+display: flex;
+justify-content: center; 
+/*align-items: center;*/
+height: 180px;
+}

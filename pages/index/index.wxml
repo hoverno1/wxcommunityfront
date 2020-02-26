@@ -1,0 +1,16 @@
+<!--pages/index/index.wxml-->
+<view bindtap='onChangeShowState'>
+<button bindtap='houduanRequest'  type='primary'>获取信息</button>
+</view>
+
+<view class="{{showView?'header_view_show':'header_view_hide'}}" >
+<view >
+  识别结果：{{shu}}
+</view>
+<view class='conter' hidden='{{img_hidden}}'>
+<text class='word'>识别的结果是否正确</text>
+
+<button bindtap=''  type='primary' bindtap='yes'>结果正确</button>
+<button bindtap=''  type='warn' bindtap='no'>结果错误</button>
+</view>
+</view>

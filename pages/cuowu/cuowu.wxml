@@ -1,0 +1,10 @@
+<!--pages/UpWords/UpWords.wxml-->
+<view class="container">
+  <text class="header">请输入真实的疾病</text>
+  <view class="section">
+    <input placeholder="疾病" bindinput="wordInput" />
+  </view>
+  <view class="botton2" bindtap="wordsUpLodaing">
+    <text class="bottonWord">上传</text>
+  </view>
+</view>

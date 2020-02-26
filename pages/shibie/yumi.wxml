@@ -1,0 +1,16 @@
+<!--pages/classic/classic.wxml-->
+<view class='counter1'>
+<text class='biaoti'>图像识别</text>
+</view>
+<text class='biaoti2'>拍照</text>
+<view class='{{counter2}}'>
+
+<image src='/images/xiangji.png' class='tupian' bindtap='chooseImg' ></image>
+</view>
+<view hidden='{{img_hidden}}'>
+<image src="{{tempFilePaths }}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
+</view>
+<view bindtap='locationUpLoading'>
+<button type='warn' bindtap='uploadImg'>上传</button>
+</view>
+

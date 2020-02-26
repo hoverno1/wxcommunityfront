@@ -1,0 +1,19 @@
+/* pages/index/index.wxss */
+.backbutton{
+  
+}
+.conter{
+  margin-top: 20%;
+
+}
+.word{
+  text-align:  center;
+}
+.header_view_hide{
+  display: none;
+}
+
+.header_view_show{
+
+  display: block;
+}

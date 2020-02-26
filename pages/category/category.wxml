@@ -1,0 +1,55 @@
+<!--pages/category/category.wxml-->
+<view class='title'>
+<text>请选择需要识别的种类</text>
+</view>
+
+<view class='counter1'>
+  <view class='counter2'>
+    <image src='/images/dadou.jpg' class='img1' bindtap='dadou'></image>
+    <text class='text1'>大豆</text>
+  </view>
+  <view class='counter2'>
+   <image src='/images/putao.jpg' class='img2' bindtap='putao'></image>
+  <text class='text1'>葡萄</text>
+  </view>
+</view>
+<view class='counter1'>
+  <view class='counter2'>
+    <image src='/images/tao.jpg' class='img1' bindtap='tao'></image>
+    <text class='text1'>桃</text>
+  </view>
+  <view class='counter2'>
+   <image src='/images/tudou.jpg' class='img2' bindtap='tudou'></image>
+  <text class='text1'>土豆</text>
+  </view>
+</view>
+<view class='counter1'>
+  <view class='counter2'>
+    <image src='/images/xihongshi.jpg' class='img1' bindtap='xihongshi'></image>
+    <text class='text1'>西红柿</text>
+  </view>
+  <view class='counter2'>
+   <image src='/images/yingtao.jpg' class='img2' bindtap='yingtao'></image>
+  <text class='text1'>樱桃</text>
+  </view>
+</view>
+<view class='counter1'>
+  <view class='counter2'>
+    <image src='/images/yumi.jpg' class='img1' bindtap='yumi'></image>
+    <text class='text1'>玉米</text>
+  </view>
+  <view class='counter2'>
+   <image src='/images/caomei.png' class='img2' bindtap='caomei'></image>
+  <text class='text1'>草莓</text>
+  </view>
+</view>
+<view class='counter1'>
+  <view class='counter2'>
+    <image src='/images/pingguo.png' class='img1' bindtap='pingguo'></image>
+    <text class='text1'>苹果</text>
+  </view>
+  <view class='counter2'>
+    <image src='/images/lajiao.jpg' class='img1' bindtap='lajiao'></image>
+    <text class='text1'>辣椒</text>
+  </view>
+</view>

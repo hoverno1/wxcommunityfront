@@ -1,0 +1,26 @@
+/* pages/category/category.wxss */
+.title{
+  text-align: center;
+  font-size: 50rpx;
+}
+.counter1{
+ display: flex;
+ flex-direction: row;
+ justify-content:  space-around;
+}
+.counter2{
+  display: flex;
+  flex-direction: column;
+}
+.img1{
+  height: 250rpx;
+  width: 250rpx;
+}
+.text1{
+color:#405f80;
+text-align:  center;
+}
+.img2{
+  height: 250rpx;
+  width: 250rpx;
+}

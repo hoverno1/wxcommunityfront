@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/category/category",
+    "pages/cuowu/cuowu",
+    "pages/dadou/dadou",
+    "pages/index/index",
+    "pages/classic/classic",
+    "pages/my/my",
+    "pages/upload/upload",
+    "pages/shibie/lajiao",
+    "pages/shibie/putao",
+    "pages/shibie/tao",
+    "pages/shibie/xihongshi",
+    "pages/shibie/yingtao",
+    "pages/shibie/yumi",
+    "pages/shibie/caomei",
+    "pages/shibie/pingguo",
+    "pages/shibie/tudou",
+    "pages/diease/lajiao",
+    "pages/diease/putao",
+    "pages/diease/tao",
+    "pages/diease/xihongshi",
+    "pages/diease/yingtao",
+    "pages/diease/yumi",
+    "pages/diease/caomei",
+    "pages/diease/pingguo",
+    "pages/diease/tudou",
+    "pages/diease/tem",
+    "pages/shibie/dadou",
+    "pages/diease/dadou",
+    "pages/wait/wait",
+    "pages/community/community",
+    "pages/publish/publish",
+    "pages/search/search",
+    "pages/community/community-detail/community-detail",
+    "pages/userRegist/regist",
+    "pages/release/release"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要获取您的地理位置"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFffFF",
+    "navigationBarTitleText": "病虫害识别",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/category/category",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "手册"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,2 @@
+<!--pages/upload/upload.wxml-->
+<text bindtap='settimeout'>正在分析，页面将自动跳转</text>

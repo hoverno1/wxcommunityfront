@@ -1,0 +1,26 @@
+<!--pages/diease/dadou.wxml-->
+<block wx:key="1" wx:for="{{data_diease}}" wx:for-item="item">
+<view class='contener'>
+  <text class='diease'>{{item.diease}}</text>
+  <view class='contener1'>
+    <text>{{item.diease_name+":"}}</text>
+    <image src='{{item.diease_img}}' class='img'></image>
+    <text>病原:</text>
+    <view>
+      <text>{{item.diease_bingyin}}</text>
+    </view>
+    <view>
+      <text>\n病症描述:</text>
+    </view>
+    <view>
+      <text>{{item.diease_zhengzhuang}}</text>
+    </view>
+    <view>
+      <text>\n解决方案:</text>
+    </view>
+    <view>
+      <text>{{item.diease_fangan}}\n</text>
+    </view>
+  </view>
+</view>
+</block>
