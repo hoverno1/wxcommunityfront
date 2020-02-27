@@ -20,7 +20,7 @@
       </view>
       <!--按钮-->
       <view>
-        <button class="loginBtn" open-type="getUserInfo" type="primary" form-type='submit' lang="zh_CN" bindgetuserinfo="onGotUserInfo">登陆</button>
+        <button class="loginBtn" open-type="getUserInfo" type="primary" form-type='submit' lang="zh_CN">登陆</button>
       </view>
 
       <view>
