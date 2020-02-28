@@ -8,8 +8,7 @@ Page({
   data: {
     username:"",
     password:"",
-    endUsername:"",
-    endPassword:""
+    status:"",
   },
   goRegist : function(){
     wx.redirectTo({
@@ -27,16 +26,32 @@ Page({
       url: 'http://localhost:8080/Test',
       //url: 'https://www.plantdisrecogn.com/wxupload/goods/getUser',//自己请求的服务器的地址
       method: 'POST',
+      data:{
+        username: self.data.username,
+        password: self.data.password,
+      },
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded' // 默认值 上传用这个类型好
       },
       success: function (req) {
-        console.log(req.data);
+        //console.log(req.data);
         self.setData({
+          status: req.data,
         })
-
-      }
+      },
     })
+    //判断登陆信息，信息正确则status值为1，跳转发布页面
+    if (self.data.status == 1) {
+      wx.redirectTo({
+        url: '../publishPost/publishPost',
+      })
+    }else{
+      wx.showToast({
+        title: '用户名或密码错误',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

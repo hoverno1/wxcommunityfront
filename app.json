@@ -34,7 +34,8 @@
     "pages/search/search",
     "pages/community/community-detail/community-detail",
     "pages/userRegist/regist",
-    "pages/release/release"
+    "pages/release/release",
+    "pages/publishPost/publishPost"
   ],
   "permission": {
     "scope.userLocation": {
