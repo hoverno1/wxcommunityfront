@@ -27,7 +27,7 @@
 
       <!--按钮-->
       <view>
-        <button class="loginBtn" type="primary" form-type='submit'>注册</button>
+        <button class="loginBtn" type="primary" form-type='submit' bindtap="uploadImg">注册</button>
       </view>
 
       <view>

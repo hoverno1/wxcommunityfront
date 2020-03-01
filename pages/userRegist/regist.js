@@ -4,6 +4,62 @@ Page({
   data: {
 
   },
+  doRegist: function (e) {
+    var self = this;
+    self.setData({
+      username: e.detail.value.username,
+      password: e.detail.value.password,
+    })
+    wx.request({
+      url: 'http://localhost:8080/Login',
+      //url: 'https://www.plantdisrecogn.com/wxupload/goods/getUser',//自己请求的服务器的地址
+      method: 'POST',
+      data: {
+        username: self.data.username,
+        password: self.data.password,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值 上传用这个类型好
+      },
+      success: function (req) {
+        //console.log(req.data);
+        self.setData({
+          status: req.data,
+        })}
+    })
+    wx.uploadFile({
+
+      url: 'http://localhost:8080/LoginPic', //仅为示例，非真实的接口地址
+      // url: 'http://localhost:8080/queryPost',
+      filePath: self.data.photos[0],
+      name: 'file',
+      success: function (res) {
+        var status2 = res.data
+        console.log(status2)
+      }
+    })
+    //判断登陆信息，信息正确则status与status2值为1，跳转发布页面
+    //status是判断用户名与密码，status2是判断头像
+    if (self.data.status == 1 && self.data.status2 == 1) {
+      wx.redirectTo({
+        url: '../publishPost/publishPost',
+      })
+    } else {
+      if (self.data.status != 1){
+      wx.showToast({
+        title: '用户名已存在',
+        icon: 'none',
+        duration: 2000
+      })
+      }else{
+        wx.showToast({
+          title: '请选择头像',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    }
+  },
   goLoginPage: function () {
     wx.switchTab({
       url: '../publish/publish',
@@ -22,30 +78,12 @@ Page({
         self.setData({
           photos: tempFilePaths
         })
-        console.log(self.data.photos)
-      }
+      },
     })
   },
 
   uploadImg: function () {
     var self = this
-    wx.uploadFile({
-
-      url: 'http://localhost:8080/queryPost', //仅为示例，非真实的接口地址
-     // url: 'http://localhost:8080/queryPost',
-      filePath: self.data.photos[0],
-      name: 'file',
-      formData: {
-        'user': '大豆',
-
-      },
-      success: function (res) {
-        var data = res.data
-        console.log(data)
-        wx.navigateTo({
-          url: '../wait/wait',
-        })
-      }
-    })
+    
   }
 })
