@@ -1,3 +1,5 @@
 <!--pages/publishPost/publishPost.wxml-->
 <!-- 上传社区文章信息页面 -->
-<text>pages/publishPost/publishPost.wxml</text>
+<view>
+<text>{{aid}}</text>
+</view>

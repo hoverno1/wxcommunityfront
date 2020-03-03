@@ -40,10 +40,28 @@ Page({
         })
       },
     })
+    wx.request({
+      url: 'http://localhost:8080/queryAid',
+      method: 'Get',
+      data: {
+        username: self.data.username,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值 上传用这个类型好
+      },
+      success: function (req) {
+        //console.log(req.data);
+        self.setData({
+          aid: req.data,
+        })
+      }
+    })
+    //等待一会再执行
+    setTimeout(function () {
     //判断登陆信息，信息正确则status值为1，跳转发布页面
     if (self.data.status == 1) {
       wx.redirectTo({
-        url: '../publishPost/publishPost',
+        url: '../publishPost/publishPost?aid=' + self.data.aid,
       })
     }else{
       wx.showToast({
@@ -52,6 +70,9 @@ Page({
         duration: 2000
       })
     }
+    },
+      //睡2秒
+      2000)
   },
   /**
    * 生命周期函数--监听页面加载

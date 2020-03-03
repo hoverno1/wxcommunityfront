@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    aid:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      var self = this;
+      //获取从上以页面携带的数据：aid
+      self.setData({
+        aid : options.aid,
+      })
   },
 
   /**

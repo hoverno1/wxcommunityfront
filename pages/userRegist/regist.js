@@ -2,7 +2,7 @@ const app = getApp()
 
 Page({
   data: {
-
+    status2: 0
   },
   doRegist: function (e) {
     var self = this;
@@ -34,15 +34,57 @@ Page({
       filePath: self.data.photos[0],
       name: 'file',
       success: function (res) {
-        var status2 = res.data
-        console.log(status2)
+        var sta = res.data
+        //console.log(res)
+        self.setData({
+          status2: sta,
+        })
       }
     })
+    //等待一会再执行
+    setTimeout(function () {
+    wx.request({
+      url: 'http://localhost:8080/queryAid',
+      method: 'Get',
+      data: {
+        username: self.data.username,
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (req) {
+        //console.log(req.data);
+        self.setData({
+          aid: req.data,
+        })
+      }
+      })
+    },
+      //睡2秒
+      2000)
+
+    
+    //等待一会再执行
+    setTimeout(function () {
     //判断登陆信息，信息正确则status与status2值为1，跳转发布页面
     //status是判断用户名与密码，status2是判断头像
     if (self.data.status == 1 && self.data.status2 == 1) {
+
+      wx.request({
+        url: 'http://localhost:8080/postAid',
+        method: 'Post',
+        data: {
+          aid: self.data.aid,
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' // 默认值 上传用这个类型好
+        },
+        success: function (req) {
+          console.log("成功上传aid")
+        }
+      })
       wx.redirectTo({
-        url: '../publishPost/publishPost',
+        url: '../publishPost/publishPost?aid=' + self.data.aid,
       })
     } else {
       if (self.data.status != 1){
@@ -59,6 +101,9 @@ Page({
         })
       }
     }
+    },
+    //睡2秒
+    3000)
   },
   goLoginPage: function () {
     wx.switchTab({
