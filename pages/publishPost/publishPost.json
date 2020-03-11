@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+ "usingComponents": {},
+"navigationBarTitleText": "作品发布",
+"navigationBarTextStyle": "white",
+"navigationBarBackgroundColor": "#000000"
 }
