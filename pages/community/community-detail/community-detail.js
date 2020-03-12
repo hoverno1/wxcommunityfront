@@ -15,6 +15,7 @@ Page({
    */
   onLoad: function(options) {
     var self = this;
+    //console.log(self.data.postId);
     wx.request({
       url: 'http://localhost:8080/queryPost',
       //url: 'https://www.plantdisrecogn.com/wxupload/goods/getUser',//自己请求的服务器的地址
@@ -31,7 +32,8 @@ Page({
     // 获取从community传来的id
     var postId = options.id;
     //console.log(postId);
-    var postData = postsData[postId];
+    //不知道为什么数据库中postId会自动增加10
+    var postData = postsData[postId-10];
     // console.log(postData);
     self.setData({
       postData: postData

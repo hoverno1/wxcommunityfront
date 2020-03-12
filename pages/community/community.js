@@ -12,6 +12,7 @@ Page({
   // 上滑加载更多
   onScrollLower: function(event) {
     // console.log("加载更多")
+    this.onLoad();
     if (this.data.counts < this.data.length) {
       this.data.counts += 3
       this.onLoad();
@@ -21,6 +22,7 @@ Page({
   toDetail: function(event) {
     //获取postId
     var postId = event.currentTarget.dataset.postid;
+    var self = this;
     // console.log("postId" + postId);
     wx.navigateTo({
       url: 'community-detail/community-detail?id=' + postId,

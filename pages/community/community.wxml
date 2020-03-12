@@ -11,7 +11,7 @@
   <scroll-view scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower" class="content">
     <block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
       <!-- 使用template模板 -->
-      <view catchtap="toDetail" data-postId="{{item.postId}}">
+      <view catchtap="toDetail" data-postId="{{item.postId-1}}">
         <template is="postItem" data="{{...item}}" />
       </view>
     </block>
