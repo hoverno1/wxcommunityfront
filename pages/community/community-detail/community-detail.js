@@ -31,6 +31,9 @@ Page({
     
     // 获取从community传来的id
     var postId = options.id;
+        self.setData({
+          postId: postId
+        })
     //console.log(postId);
     //不知道为什么数据库中postId会自动增加10
     var postData = postsData[postId-10];
@@ -41,6 +44,15 @@ Page({
   
   }
 })
+  },
+
+  // 留言编程部分
+
+  writemessage:function(){
+    var self = this;
+    wx: wx.navigateTo({//this.data.title  this.data.no
+      url: '../../message/message?postId=' + self.data.postId ,
+    })
   },
 
   /**
