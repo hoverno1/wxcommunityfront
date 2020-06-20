@@ -1,5 +1,5 @@
 // pages/publish/publish.js
-var app = getApp
+var app = getApp()
 Page({
 
   /**
@@ -22,9 +22,9 @@ Page({
       username: e.detail.value.username,
       password: e.detail.value.password,
     })
+    app.globalData.globalUserName=self.data.username,
     wx.request({
-      url: 'http://localhost:8080/Test',
-      //url: 'https://www.plantdisrecogn.com/wxupload/goods/getUser',//自己请求的服务器的地址
+      url: 'https://my.plantdisrecogn.com/wxcommunity/Test',
       method: 'POST',
       data:{
         username: self.data.username,
@@ -41,7 +41,7 @@ Page({
       },
     })
     wx.request({
-      url: 'http://localhost:8080/queryAid',
+      url: 'https://my.plantdisrecogn.com/wxcommunity/queryAid',
       method: 'Get',
       data: {
         username: self.data.username,

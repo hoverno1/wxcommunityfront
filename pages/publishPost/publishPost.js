@@ -14,8 +14,7 @@ doRegist: function(e){
     diseaseContent: e.detail.value.diseaseContent,
   })
   wx.request({
-    url: 'http://localhost:8080/publishPost',
-    //url: 'https://www.plantdisrecogn.com/wxupload/goods/getUser',//自己请求的服务器的地址
+    url: 'https://my.plantdisrecogn.com/wxcommunity/publishPost',
     method: 'POST',
     data: {
       aid: self.data.aid,
@@ -34,8 +33,7 @@ doRegist: function(e){
   })
   wx.uploadFile({
 
-    url: 'http://localhost:8080/publishPostPic', //仅为示例，非真实的接口地址
-    // url: 'http://localhost:8080/queryPost',
+    url: 'https://my.plantdisrecogn.com/wxcommunity/publishPostPic', 
     filePath: self.data.photos[0],
     name: 'file',
     success: function (res) {
@@ -91,6 +89,11 @@ doRegist: function(e){
     })
   },
 
+  toCommunity:function(){
+    wx.switchTab({
+      url: '../community/community',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

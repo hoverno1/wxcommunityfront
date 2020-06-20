@@ -9,10 +9,10 @@ Page({
     self.setData({
       username: e.detail.value.username,
       password: e.detail.value.password,
+      globalUserName:username
     })
     wx.request({
-      url: 'http://localhost:8080/Login',
-      //url: 'https://www.plantdisrecogn.com/wxupload/goods/getUser',//自己请求的服务器的地址
+      url: 'https://my.plantdisrecogn.com/wxcommunity/Login',
       method: 'POST',
       data: {
         username: self.data.username,
@@ -29,8 +29,7 @@ Page({
     })
     wx.uploadFile({
 
-      url: 'http://localhost:8080/LoginPic', //仅为示例，非真实的接口地址
-      // url: 'http://localhost:8080/queryPost',
+      url: 'https://my.plantdisrecogn.com/wxcommunity/LoginPic',
       filePath: self.data.photos[0],
       name: 'file',
       success: function (res) {
@@ -44,7 +43,7 @@ Page({
     //等待一会再执行
     setTimeout(function () {
     wx.request({
-      url: 'http://localhost:8080/queryAid',
+      url: 'https://my.plantdisrecogn.com/wxcommunity/queryAid',
       method: 'Get',
       data: {
         username: self.data.username,
@@ -71,7 +70,7 @@ Page({
     if (self.data.status == 1 && self.data.status2 == 1) {
 
       wx.request({
-        url: 'http://localhost:8080/postAid',
+        url: 'https://my.plantdisrecogn.com/wxcommunity/postAid',
         method: 'Post',
         data: {
           aid: self.data.aid,
@@ -80,7 +79,7 @@ Page({
           'content-type': 'application/x-www-form-urlencoded' // 默认值 上传用这个类型好
         },
         success: function (req) {
-          console.log("成功上传aid")
+          //console.log("成功上传aid")
         }
       })
       wx.redirectTo({

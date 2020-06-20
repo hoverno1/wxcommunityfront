@@ -1,6 +1,6 @@
 <!--pages/community.wxml-->
 <!-- 引入模板 -->
-<import src="community-item/community-item-template.wxml" />
+<import src="recommend-item/recommend-item-template.wxml" />
 <view>
   <!-- <view class="header">
     <navigator url="../search/search" open-type='navigate' class="searchBar">

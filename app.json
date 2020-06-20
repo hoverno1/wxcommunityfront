@@ -31,10 +31,8 @@
     "pages/wait/wait",
     "pages/community/community",
     "pages/publish/publish",
-    "pages/search/search",
     "pages/community/community-detail/community-detail",
     "pages/userRegist/regist",
-    "pages/release/release",
     "pages/publishPost/publishPost",
     "pages/message/message"
   ],
