@@ -34,7 +34,8 @@
     "pages/community/community-detail/community-detail",
     "pages/userRegist/regist",
     "pages/publishPost/publishPost",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/recommend/recommend"
   ],
   "permission": {
     "scope.userLocation": {
@@ -54,8 +55,8 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/my/my",
-        "text": "手册"
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐"
       },
       {
         "pagePath": "pages/community/community",
